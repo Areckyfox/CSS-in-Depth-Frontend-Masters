@@ -19,7 +19,7 @@
 body {
     counter-reset: counterValid;
 }
-label {
+.validation-css label {
     display: block;
 }
 .validation-css input {
