@@ -16,6 +16,41 @@
     content: ''counter(count2)') ';
 }
 
+body {
+    counter-reset: counterValid;
+}
+label {
+    display: block;
+}
+.validation-css input {
+    display: block;
+    margin: 1rem;
+}
+.validation-css input:invalid {
+    counter-increment: counterValid;
+    background: red;
+}
+.validation-css input:valid {
+    background: green;
+}
+
+.validation-css input[type="email"]:invalid + span:after {
+    content: "Enter the correct email address";
+    color: red;
+}
+.validation-css input[type="number"]:invalid + span:after {
+    content: "Enter the  number <= 6";
+    color: red;
+}
+.validation-css input[pattern]:invalid + span:after {
+    content: "Enter the big letter min: 3 max: 6";
+    color: red;
+}
+
+
+.validation-css p:before {
+    content: 'invalid ' counter(counterValid) ' entries'
+}
 
 
 
