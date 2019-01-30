@@ -1,0 +1,24 @@
+.counter-css .first-div {
+    counter-reset: count; 
+}
+
+.counter-css .first-div p::before {
+    counter-increment: count;
+    content: ''counter(count)') ';
+}
+
+.counter-css .second-div {
+    counter-reset: count2; 
+}
+
+.counter-css .second-div p::before {
+    counter-increment: count2;
+    content: ''counter(count2)') ';
+}
+
+
+
+
+
+
+
