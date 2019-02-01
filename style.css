@@ -30,9 +30,7 @@ body {
     counter-increment: counterValid;
     background: red;
 }
-.validation-css input:valid {
-    background: green;
-}
+
 
 .validation-css input[type="email"]:invalid + span:after {
     content: "Enter the correct email address";
@@ -52,6 +50,68 @@ body {
     content: 'invalid ' counter(counterValid) ' entries'
 }
 
+.flex-box {
+    box-sizing: border-box;
+    color: navy;
+    border: solid;
+    display: flex;
+    height: 500px;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.flex-box .block {
+    width: 60px;
+    height: 60px;
+    margin: 2px;
+    font-size: 2rem;
+    color: black;
+    background: #09bef5;
+    border: solid;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis:10%;
+    
+}
+
+.flex-box .block:nth-of-type(1){
+background: yellowgreen;
+flex-basis: 20%;
+}
+.flex-box .block:nth-of-type(2){
+
+}
+.flex-box .block:nth-of-type(3){
+order: -1;
+}
+.flex-box .block:nth-of-type(4){
+order: -1;
+
+}
+.flex-box .block:nth-of-type(5){
+order: -1;
+
+}
+.flex-box .block:nth-of-type(6){
+order: -2;
+}
+.flex-box .block:nth-of-type(7){
+
+}
+.flex-box .block:nth-of-type(8){
+order: 2;
+
+}
+.flex-box .block:nth-of-type(9){
+
+}
+.flex-box .block:nth-of-type(10){
+
+}
 
 
 
