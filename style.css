@@ -1,119 +1,121 @@
 .counter-css .first-div {
-    counter-reset: count; 
+  counter-reset: count;
 }
 
 .counter-css .first-div p::before {
-    counter-increment: count;
-    content: ''counter(count)') ';
+  counter-increment: count;
+  content: "" counter(count) ") ";
 }
 
 .counter-css .second-div {
-    counter-reset: count2; 
+  counter-reset: count2;
 }
 
 .counter-css .second-div p::before {
-    counter-increment: count2;
-    content: ''counter(count2)') ';
+  counter-increment: count2;
+  content: "" counter(count2) ") ";
 }
 
 body {
-    counter-reset: counterValid;
+  counter-reset: counterValid;
 }
 .validation-css label {
-    display: block;
+  display: block;
 }
 .validation-css input {
-    display: block;
-    margin: 1rem;
+  display: block;
+  margin: 1rem;
 }
 .validation-css input:invalid {
-    counter-increment: counterValid;
-    background: red;
+  counter-increment: counterValid;
+  background: red;
 }
-
 
 .validation-css input[type="email"]:invalid + span:after {
-    content: "Enter the correct email address";
-    color: red;
+  content: "Enter the correct email address";
+  color: red;
 }
 .validation-css input[type="number"]:invalid + span:after {
-    content: "Enter the  number <= 6";
-    color: red;
+  content: "Enter the  number <= 6";
+  color: red;
 }
 .validation-css input[pattern]:invalid + span:after {
-    content: "Enter the big letter min: 3 max: 6";
-    color: red;
+  content: "Enter the big letter min: 3 max: 6";
+  color: red;
 }
 
-
 .validation-css p:before {
-    content: 'invalid ' counter(counterValid) ' entries'
+  content: "invalid " counter(counterValid) " entries";
 }
 
 .flex-box {
-    box-sizing: border-box;
-    color: navy;
-    border: solid;
-    display: flex;
-    height: 500px;
-    flex-flow: row;
-    justify-content: center;
-    align-items: center;
-    
+  box-sizing: border-box;
+  color: navy;
+  border: solid;
+  display: flex;
+  height: 500px;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex-box .block {
-    width: 60px;
-    height: 60px;
-    margin: 2px;
-    font-size: 2rem;
-    color: black;
-    background: #09bef5;
-    border: solid;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    flex-basis:10%;
-    
+  width: 60px;
+  height: 60px;
+  margin: 2px;
+  color: black;
+  background: #09bef5;
+  border: solid;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 10%;
 }
 
-.flex-box .block:nth-of-type(1){
-background: yellowgreen;
-flex-basis: 20%;
+.flex-box .block:nth-of-type(1) {
+  background: yellowgreen;
+  flex-basis: 20%;
 }
-.flex-box .block:nth-of-type(2){
-
+.flex-box .block:nth-of-type(2) {
 }
-.flex-box .block:nth-of-type(3){
-order: -1;
+.flex-box .block:nth-of-type(3) {
+  order: -1;
 }
-.flex-box .block:nth-of-type(4){
-order: -1;
-
+.flex-box .block:nth-of-type(4) {
+  order: -1;
 }
-.flex-box .block:nth-of-type(5){
-order: -1;
-
+.flex-box .block:nth-of-type(5) {
+  order: -1;
 }
-.flex-box .block:nth-of-type(6){
-order: -2;
+.flex-box .block:nth-of-type(6) {
+  order: -2;
 }
-.flex-box .block:nth-of-type(7){
-
+.flex-box .block:nth-of-type(7) {
 }
-.flex-box .block:nth-of-type(8){
-order: 2;
-
+.flex-box .block:nth-of-type(8) {
+  order: 2;
 }
-.flex-box .block:nth-of-type(9){
-
+.flex-box .block:nth-of-type(9) {
 }
-.flex-box .block:nth-of-type(10){
-
+.flex-box .block:nth-of-type(10) {
 }
 
+.grid {
+  height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 2fr;
+  grid-template-rows: repeat(2, 1fr) 100px;
+  grid-gap: 10px;
+  grid-column-gap: 30px;
+  grid-gap: 20px 20px;
+}
 
-
-
-
+.grid .block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #09bef5;
+  border: 1px solid;
+}
