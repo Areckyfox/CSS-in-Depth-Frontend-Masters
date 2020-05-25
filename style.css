@@ -1,10 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .counter-css .first-div {
   counter-reset: count;
 }
 
 .counter-css .first-div p::before {
   counter-increment: count;
-  content: "" counter(count) ") ";
+  content: '' counter(count) ') ';
 }
 
 .counter-css .second-div {
@@ -13,7 +18,7 @@
 
 .counter-css .second-div p::before {
   counter-increment: count2;
-  content: "" counter(count2) ") ";
+  content: '' counter(count2) ') ';
 }
 
 body {
@@ -31,21 +36,21 @@ body {
   background: red;
 }
 
-.validation-css input[type="email"]:invalid + span:after {
-  content: "Enter the correct email address";
+.validation-css input[type='email']:invalid + span:after {
+  content: 'Enter the correct email address';
   color: red;
 }
-.validation-css input[type="number"]:invalid + span:after {
-  content: "Enter the  number <= 6";
+.validation-css input[type='number']:invalid + span:after {
+  content: 'Enter the  number <= 6';
   color: red;
 }
 .validation-css input[pattern]:invalid + span:after {
-  content: "Enter the big letter min: 3 max: 6";
+  content: 'Enter the big letter min: 3 max: 6';
   color: red;
 }
 
 .validation-css p:before {
-  content: "invalid " counter(counterValid) " entries";
+  content: 'invalid ' counter(counterValid) ' entries';
 }
 
 .flex-box {
@@ -118,4 +123,42 @@ body {
   justify-content: center;
   background-color: #09bef5;
   border: 1px solid;
+}
+.grid {
+  /* height: 500px;
+    width: 500px; */
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 125px) repeat(3, 1fr) 3fr;
+  grid-template-rows: auto 125px repeat(2, 4em) auto auto auto 200px;
+  grid-row-gap: 10px;
+  grid-column-gap: 20px;
+  grid-gap: 10px 20px;
+  grid-gap: 1em;
+}
+
+.grid .block {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: teal;
+  border: 1px solid;
+}
+
+.grid .block:first-child {
+  grid-column: 1/7;
+}
+
+.grid .block:nth-of-type(2) {
+  grid-row: 2/7;
+}
+.grid .block:nth-of-type(3) {
+  grid-area: 2 / 2 / 7 /7;
+}
+.grid .block:nth-of-type(4) {
+  grid-column: 1 / 7;
+}
+.grid .block:nth-of-type(9) {
+  grid-area: 11 /2 / 13 /5;
 }
